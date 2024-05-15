@@ -9,32 +9,32 @@
     </description>
 
     <!-- Rule to check for too many lines of code in a class -->
-<!--    <rule ref="category/java/design.xml/NcssCount">-->
-<!--        <properties>-->
-<!--            <property name="minimum" svalue="50"/>-->
-<!--        </properties>-->
-<!--    </rule>-->
+    <rule ref="category/java/design.xml/NcssCount">
+        <properties>
+            <property name="minimum" svalue="50"/>
+        </properties>
+    </rule>
 
-<!--    &lt;!&ndash; Rule to check for high cyclomatic complexity &ndash;&gt;-->
-<!--    <rule ref="category/java/design.xml/CyclomaticComplexity">-->
-<!--        <properties>-->
-<!--            <property name="reportLevel" value="10"/>-->
-<!--        </properties>-->
-<!--    </rule>-->
+    <!-- Rule to check for high cyclomatic complexity -->
+    <rule ref="category/java/design.xml/CyclomaticComplexity">
+        <properties>
+            <property name="reportLevel" value="10"/>
+        </properties>
+    </rule>
 
-<!--    &lt;!&ndash; Rule to check for excessive coupling between objects &ndash;&gt;-->
-<!--    <rule ref="category/java/design.xml/CouplingBetweenObjects">-->
-<!--        <properties>-->
-<!--            <property name="reportLevel" value="10"/>-->
-<!--        </properties>-->
-<!--    </rule>-->
+    <!-- Rule to check for excessive coupling between objects -->
+    <rule ref="category/java/design.xml/CouplingBetweenObjects">
+        <properties>
+            <property name="reportLevel" value="10"/>
+        </properties>
+    </rule>
 
-<!--    &lt;!&ndash; Rule to identify potential 'God Classes' &ndash;&gt;-->
-<!--    <rule ref="category/java/design.xml/GodClass">-->
-<!--        <properties>-->
-<!--            <property name="reportLevel" value="1.0"/>-->
-<!--        </properties>-->
-<!--    </rule>-->
+    <!-- Rule to identify potential 'God Classes' -->
+    <rule ref="category/java/design.xml/GodClass">
+        <properties>
+            <property name="reportLevel" value="1.0"/>
+        </properties>
+    </rule>
 
     <!-- Add more rules here as needed -->
 
