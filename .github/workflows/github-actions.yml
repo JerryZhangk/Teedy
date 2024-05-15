@@ -1,0 +1,41 @@
+name: Java CI with Maven
+on:
+push:
+branches: [ $default-branch ]
+pull_request:
+branches: [ $default-branch ]
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v3
+- name: Set up JDK 11
+uses: actions/setup-java@v3
+with:
+java-version: '11'
+distribution: 'temurin'
+cache: maven
+- name: Build with Maven
+run: mvn -B -DskipTests package --file pom.xml
+After that, commit this file to a new branch and start a pull request. This will trigger this workflow and the Github Actions will run it.
+Configure when Github Action is triggered
+However, if you commit this file change to the default branch, you may find out that it didn't run later. You can still run it manually according
+to:
+https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow.
+Let's modify our github-actions.yml file to:
+name: Java CI with Maven
+on:
+[ push, pull_request, workflow_dispatch ]
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v3
+- name: Set up JDK 11
+uses: actions/setup-java@v3
+with:
+java-version: '11'
+distribution: 'temurin'
+cache: maven
+- name: Build with Maven
+run: mvn -B -DskipTests package --file pom.xml
